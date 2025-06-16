@@ -41,7 +41,7 @@ def save_data(df, output_path):
     print(f"Preprocessed dataset saved to {output_path}")
 
 if __name__ == "__main__":
-    input_file = "D:\SMSL_Nabila-Febriyanti-Valentin\Eksperimen_Nabila-Febriyanti-Valentin\survey.csv"
+    input_file = "survey.csv"
     output_file = "mental_health_cleaned.csv"
 
     df = load_data(input_file)
