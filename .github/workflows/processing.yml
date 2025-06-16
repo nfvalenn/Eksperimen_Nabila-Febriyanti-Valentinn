@@ -1,0 +1,45 @@
+name: Dataset Preprocessing Automation
+
+on:
+  push:
+    paths:
+      - 'preprocessing/**'
+      - 'mental_health_raw.csv'
+      - '.github/workflows/preprocessing.yml'
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  preprocess:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r preprocessing/requirements.txt
+
+      - name: Run preprocessing script
+        run: |
+          python preprocessing/automate_Nabila-Febriyanti-Valentin.py
+
+      - name: Commit and push cleaned dataset
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A preprocessing/mental_health_cleaned.csv
+          git commit -m "Auto-update cleaned dataset [skip ci]" || echo "No changes to commit"
+          git push
