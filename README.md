@@ -8,9 +8,9 @@ Proyek ini bertujuan untuk membersihkan dan menyiapkan dataset **mental health i
 
 Tahapan yang dilakukan meliputi:
 
-1. **Eksplorasi Data Awal (EDA)** 🗂️
-2. **Pra-pemrosesan Dataset (Preprocessing)**
-3. **Pembuatan Dataset Siap Latih**
+1. Eksplorasi Data Awal (EDA)
+2. Pra-pemrosesan Dataset (Preprocessing)
+3. Pembuatan Dataset Siap Latih
 
 Hasil akhir dari proyek ini berupa dataset yang telah bersih dan siap digunakan untuk **training model machine learning**.
 
@@ -82,7 +82,7 @@ python automate_Nabila-Febriyanti-Valentin.py
 
 3️⃣ **Hasil Output**
 
-* Dataset hasil preprocessing akan tersimpan sebagai **`mental_health_cleaned.csv`**
+* Dataset hasil preprocessing akan tersimpan sebagai [mental_health_cleaned.csv](https://github.com/nfvalenn/Eksperimen_Nabila-Febriyanti-Valentinn/blob/main/preprocessing/mental_health_cleaned.csv)
 
 ---
 
